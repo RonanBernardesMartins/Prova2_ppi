@@ -83,8 +83,6 @@ function reset() {
 
     elapsedTime = 0;
     isRunning = false;
-    // O lapCounter NÃO é zerado aqui, ele deve continuar contando os registros.
-
     displayMinutes.textContent = '00';
     displaySeconds.textContent = '00';
     displayMilliseconds.textContent = '000';
