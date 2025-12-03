@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Orbitron", sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    background-color: #F1F1F1;
+    height: 100vh;
+}
+.container h1{
+    color: rgb(59, 59, 59);
+}
+.timer{
+    display: flex;
+    font-size: 55px;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+}
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    min-width: 90px;
+}
+.separator{
+    padding: 0 10px;
+    color: rgb(59, 59, 59);
+
+}
+#miliseconds{
+    font-size: 30px;
+    color: rgb(168, 168, 168);
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+.btn{
+    height: 65px;
+    width: 170px;
+    border-radius: 4px;
+    border:  none;
+    background-color: lightskyblue;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: rgb(59, 59, 59);
+}.btn:hover{
+    background-color: rgb(47, 167, 241);
+    transform: scale(1.1);
+}
+#startBtn.active {
+    background-color: #ff6347; 
+}
+#startBtn.active:hover {
+    background-color: #d14833; 
+}
+.laps-container {
+    width: 90%;
+    max-width: 500px;
+    margin-top: 2rem;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #e5e5e5; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100px; 
+}
+.laps-container h2 {
+    text-align: center;
+    color: rgb(59, 59, 59);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+#lapsList {
+    list-style: none;
+    padding: 0;
+}
+#lapsList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    color: rgb(59, 59, 59);
+    font-family: "Orbitron", sans-serif; 
+}
+#lapBtn {
+    background-color: #ffc107; 
+}
+#lapBtn:hover {
+    background-color: #ff9800;
+}
