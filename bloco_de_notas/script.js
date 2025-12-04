@@ -7,28 +7,28 @@ const newNoteBtn = document.getElementById('new-note-btn');
 const deleteNoteBtn = document.getElementById('delete-note-btn');
 const notesListDiv = document.getElementById('notes-list');
 
-function getNotes() {
+function getNotes(){
     const notesJson = localStorage.getItem(LOCAL_STORAGE_KEY);
     return notesJson ? JSON.parse(notesJson) : [];
 }
 
-function saveNotes(notes) {
+function saveNotes(notes){
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(notes));
 }
 
-function clearForm() {
+function clearForm(){
     noteContentInput.value = '';
     noteIdInput.value = '';
     deleteNoteBtn.style.display = 'none'; 
 }
 
-function loadNoteForEdit(note) {
+function loadNoteForEdit(note){
     noteContentInput.value = note.content;
     noteIdInput.value = note.id;
     deleteNoteBtn.style.display = 'inline-block'; 
 }
 
-function handleNoteClick(noteId) {
+function handleNoteClick(noteId){
     const notes = getNotes();
     const note = notes.find(n => n.id == noteId);
 
@@ -37,7 +37,7 @@ function handleNoteClick(noteId) {
     }
 }
 
-function createNoteElement(note) {
+function createNoteElement(note){
     const noteDiv = document.createElement('div');
     noteDiv.classList.add('note-item');
     const preview = note.content.split('\n')[0]; 
@@ -49,7 +49,7 @@ function createNoteElement(note) {
     return noteDiv;
 }
 
-function renderNotesList() {
+function renderNotesList(){
     notesListDiv.innerHTML = '';
     const notes = getNotes();
 
@@ -64,7 +64,7 @@ function renderNotesList() {
     });
 }
 
-function saveOrUpdateNote() {
+function saveOrUpdateNote(){
     const content = noteContentInput.value.trim();
     const noteId = noteIdInput.value;
 
@@ -76,7 +76,7 @@ function saveOrUpdateNote() {
     let notes = getNotes();
 
     if (noteId) {
-        notes = notes.map(note => {
+        notes = notes.map(note =>{
             if (note.id == noteId) {
                 return { id: note.id, content: content };
             }
@@ -97,17 +97,17 @@ function saveOrUpdateNote() {
     renderNotesList();
 }
 
-function deleteNote() {
+function deleteNote(){
     const noteId = noteIdInput.value;
 
-    if (!noteId) {
+    if (!noteId){
         alert('Selecione uma nota para excluir.');
         return;
     }
 
     const isConfirmed = confirm('Tem certeza de que deseja excluir esta nota? Esta ação é irreversível.');
 
-    if (isConfirmed) {
+    if (isConfirmed){
         let notes = getNotes();
         notes = notes.filter(note => note.id != noteId); 
 
@@ -118,7 +118,7 @@ function deleteNote() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () =>{
     renderNotesList(); 
 
     saveNoteBtn.addEventListener('click', saveOrUpdateNote);
