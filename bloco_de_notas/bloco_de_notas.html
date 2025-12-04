@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas</title>
+    <link rel="stylesheet" href="style.CSS">
+</head>
+<body>
+    <div class="container">
+        <h1>Bloco de Notas</h1>
+
+        <div id="note-form-container">
+            <input type="hidden" id="note-id">
+            <textarea id="note-content" placeholder="Digite sua nota aqui..."></textarea>
+            <div class="actions">
+                <button id="save-note-btn">Salvar Nota</button>
+                <button id="new-note-btn" class="secondary">Nova Nota</button>
+                <button id="delete-note-btn" class="danger" style="display: none;">Excluir Nota</button>
+            </div>
+        </div>
+        
+        <hr>
+
+        <h2>Minhas Notas</h2>
+        <div id="notes-list">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

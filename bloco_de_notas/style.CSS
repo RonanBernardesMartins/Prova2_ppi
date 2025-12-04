@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#note-content {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+#save-note-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 20px 0;
+}
+
+#notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note-item {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    border-left: 5px solid #007bff;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Para garantir que o preview não quebre a linha */
+}
+
+.note-item:hover {
+    background-color: #dee2e6;
+}
